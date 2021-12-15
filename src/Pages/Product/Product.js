@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -18,7 +20,7 @@ const products = [
     {
       id: 1,
       name: 'Nike Air Max Dawn',
-      href: '/productdetails',
+    //   href: '/productdetails',
       imageSrc: 'https://i.ibb.co/n3KL29Y/air-max-dawn-shoe-gq9-GGH.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '$192'
@@ -60,7 +62,7 @@ const products = [
   
   export default function Example() {
     return (
-      <div className="bg-white">
+      <div className="bg-white m-10 rounded-buttom-lg">
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
   
@@ -77,10 +79,10 @@ const products = [
                 <div className="mt-4 flex justify-between">
                   <div>
                     <h3 className="text-lg font-bold text-gray-700">
-                      <a href={product.href}>
-                        <span aria-hidden="true" className="absolute inset-0" />
+                    <Link to='/productdetails'><a >
+                        <span aria-hidden="true" className="absolute inset-0" /> 
                         {product.name}
-                      </a>
+                      </a></Link>
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                   </div>

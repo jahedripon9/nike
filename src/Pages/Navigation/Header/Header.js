@@ -2,10 +2,11 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Women', href: '#', current: true },
-  { name: 'Men', href: '/product', current: true },
+  { name: 'Men', href:'/product', current: true },
   { name: 'Kids', href: '#', current: true },
   { name: 'Collections', href: '#', current: true },
 ]
@@ -16,7 +17,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-zinc-300 rounded">
+    <Disclosure as="nav" className="bg-zinc-300 rounded-top mt-10 mx-10 -mb-10">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -34,23 +35,24 @@ export default function Example() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
+                  
+                <Link to='/'> <img
                     className="block lg:hidden h-8 w-auto"
                     src="https://i.ibb.co/vxvSvJk/Nike-logo.png"
                     alt="Workflow"
-                  />
-                  <img
+                  /></Link>
+                  <Link to='/'><img 
                     className="hidden lg:block h-8 w-auto"
                     src="https://i.ibb.co/vxvSvJk/Nike-logo.png"
                     alt="Workflow"
-                  />
+                  /></Link>
                 </div>
                 <div className="hidden sm:block sm:ml-6 ">
                   <div className="flex ml-20 space-x-4 ">
                     {navigation.map((item) => (
-                      <a
+                     <Link to='/product'> <a
                         key={item.name}
-                        href={item.href}
+                        // href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium ' 
@@ -58,8 +60,9 @@ export default function Example() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </a></Link>
                     ))}
+                    
                   </div>
                 </div>
               </div>
