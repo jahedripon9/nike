@@ -7,7 +7,7 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <div className='bg-zinc-500 m-10 rounded'>
+        <div className='bg-white m-10 rounded'>
             <ProdcutBanner></ProdcutBanner>
             <Product></Product>
             {/* <ProductDetails></ProductDetails> */}

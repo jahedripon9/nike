@@ -62,7 +62,7 @@ const products = [
   
   export default function Example() {
     return (
-      <div className="bg-white m-10 rounded-buttom-lg">
+      <div className="bg-white m-10  rounded-buttom-lg">
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
   
