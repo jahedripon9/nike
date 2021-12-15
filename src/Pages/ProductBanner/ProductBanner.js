@@ -11,8 +11,8 @@ export default function Example() {
               Taking the classic look of heritage Nike Running into a new realm, the Nike Air Max Pre-Day brings you a fast-paced look that's ready for today's world.A true nod to the past with a design made from at least 20% recycled material by weight.
           </p></span>
           <div>
-              <button class="font-bold rounded-lg bg-black text-sm text-white px-5 py-2 sm:mx-auto hover:bg-gray-50 hover:text-black hover: outline">Add to Bag</button>
-              <button class="font-bold outline rounded-lg lg:mx-8 text-sm text-black px-5 py-2 hover:bg-slate-400 hover:text-white">₹11,495.00</button>
+              <button class="lg:font-bold rounded-lg bg-black lg:text-base text-white lg:px-5 lg:py-2 sm:mx-auto px-5 py-1 text-base  hover:bg-gray-50 hover:text-black hover: outline mr-3">Add to Bag</button>
+              <button class="lg:font-bold outline rounded-lg lg:mx-8 lg:text-base	 text-black lg:px-5 lg:py-2 px-3 py-1 text-base  hover:bg-slate-400 hover:text-white">₹11,495.00</button>
           </div>
           <div class="grid grid-cols-3 gap-6 mt-10 bg-zinc-300 py-5 px-10   rounded-lg">
                 <div><img  src="https://i.ibb.co/HDNj9D7/Rectangle-1047.png" alt="" /></div>

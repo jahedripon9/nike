@@ -1,12 +1,13 @@
 /* This example requires Tailwind CSS v2.0+ */
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+
 export default function Example() {
   return (
     <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
       <div className="flex-1 flex justify-between sm:hidden">
         <a
-          href="#"
+          href="#" 
           className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
         >
           Previous
@@ -43,9 +44,9 @@ export default function Example() {
               1
             </a>
             <a
-              href="#"
+              href="/product"
               className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-            >
+            > 
               2
             </a>
             <a

@@ -5,7 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Women', href: '#', current: true },
-  { name: 'Men', href: '#', current: true },
+  { name: 'Men', href: '/product', current: true },
   { name: 'Kids', href: '#', current: true },
   { name: 'Collections', href: '#', current: true },
 ]
@@ -79,7 +79,7 @@ export default function Example() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://i.ibb.co/zhRQH8q/Jahad-Master.jpg"
                         alt=""
                       />
                     </Menu.Button>
