@@ -22,7 +22,7 @@ export default function Example() {
             </h2>
           
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md  lg:-mt-52">
+            <div className="inline-flex rounded-md  lg:mt-5">
               <img className="lg:w-96 lg:mr-40" src="https://i.ibb.co/pX2RgtQ/image-1.png" alt="" />
             </div>
           </div>

@@ -26,7 +26,7 @@ import { StarIcon } from '@heroicons/react/solid'
 import { RadioGroup } from '@headlessui/react'
 
 const product = {
-  name: 'Basic Tee 6-Pack',
+  name: 'Nike Air Max Dawn',
   price: '$192',
   href: '#',
   breadcrumbs: [
@@ -35,7 +35,7 @@ const product = {
   ],
   images: [
     {
-      src: 'https://i.ibb.co/0h1j8Dy/air-max-dawn-shoe-gq9-GGH-7.jpg',
+      src: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/b82d1ec4-1b87-422e-9160-91bc68bbc002/air-max-dawn-shoe-gq9GGH.png',
       alt: 'Two each of gray, white, and black shirts laying flat.',
     },
     {
@@ -67,15 +67,13 @@ const product = {
     { name: '3XL', inStock: true },
   ],
   description:
-    'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+    'Rooted to athletics DNA, the Air Max Dawn is made from at least 20% recycled material by weight.Synthetic suede and other materials blend vintage running vibes with fresh details.Nike Air cushioning delivers a feel-good forecast for the day.',
   highlights: [
-    'Hand cut and sewn locally',
-    'Dyed with our proprietary colors',
-    'Pre-washed & pre-shrunk',
-    'Ultra-soft 100% cotton',
+    'Colour Shown: Particle Grey/Armoury Navy/Light Bone/Dark Citron',
+    'Style: DJ3624-003',
   ],
   details:
-    'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    'Revolutionary Air technology first made its way into Nike footwear in 1978.In 1987, the Air Max 1 debuted with visible Air technology in its heel, allowing fans more than just the feel of Air cushioning—suddenly they could see it.Since then, next-generation Air Max shoes have become a hit with athletes and collectors by offering striking colour combinations and reliable, lightweight cushioning.',
 }
 const reviews = { href: '#', average: 4, totalCount: 117 }
 
@@ -88,7 +86,7 @@ export default function Example() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 
   return (
-    <div className="bg-white">
+    <div className="bg-white text-left">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol role="list" className="max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -162,12 +160,12 @@ export default function Example() {
 
           {/* Options */}
           <div className="mt-4 lg:mt-0 lg:row-span-3">
-            <h2 className="sr-only">Product information</h2>
+            <h2 className="sr-only font-bold">Product information</h2>
             <p className="text-3xl text-gray-900">{product.price}</p>
 
             {/* Reviews */}
             <div className="mt-6">
-              <h3 className="sr-only">Reviews</h3>
+              <h3 className="sr-only font-bold">Reviews</h3>
               <div className="flex items-center">
                 <div className="flex items-center">
                   {[0, 1, 2, 3, 4].map((rating) => (
@@ -182,7 +180,7 @@ export default function Example() {
                   ))}
                 </div>
                 <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500 font-bold">
                   {reviews.totalCount} reviews
                 </a>
               </div>
@@ -191,7 +189,7 @@ export default function Example() {
             <form className="mt-10">
               {/* Colors */}
               <div>
-                <h3 className="text-sm text-gray-900 font-medium">Color</h3>
+                <h3 className="text-sm text-gray-900 font-medium font-bold">Color</h3>
 
                 <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
@@ -299,15 +297,15 @@ export default function Example() {
           <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             {/* Description and details */}
             <div>
-              <h3 className="sr-only">Description</h3>
+              <h3 className="sr-only font-bold">Description</h3>
 
-              <div className="space-y-6">
-                <p className="text-base text-gray-900">{product.description}</p>
+              <div className="space-y-6 ">
+                <p className="text-base text-gray-900 ">{product.description}</p>
               </div>
             </div>
 
             <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
+              <h3 className="text-lg font-medium text-gray-900 font-bold">Highlights</h3>
 
               <div className="mt-4">
                 <ul role="list" className="pl-4 list-disc text-sm space-y-2">
@@ -321,7 +319,7 @@ export default function Example() {
             </div>
 
             <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
+              <h2 className="text-lg font-medium text-gray-900 font-bold">Details</h2>
 
               <div className="mt-4 space-y-6">
                 <p className="text-sm text-gray-600">{product.details}</p>

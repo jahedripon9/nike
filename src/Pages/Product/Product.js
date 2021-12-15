@@ -21,7 +21,7 @@ const products = [
       href: '/productdetails',
       imageSrc: 'https://i.ibb.co/n3KL29Y/air-max-dawn-shoe-gq9-GGH.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$35'
+      price: '$192'
     },
     {
       id: 2,
@@ -76,7 +76,7 @@ const products = [
                 </div>
                 <div className="mt-4 flex justify-between">
                   <div>
-                    <h3 className="text-sm text-gray-700">
+                    <h3 className="text-lg font-bold text-gray-700">
                       <a href={product.href}>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.name}
@@ -84,7 +84,7 @@ const products = [
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                  <p className="text-lg font-bold font-medium text-gray-900">{product.price}</p>
                 </div>
               </div>
             ))}
