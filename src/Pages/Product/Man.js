@@ -101,6 +101,7 @@ const products = [
               </div>
             ))}
           </div>
+          <img src="https://i.ibb.co/QJr6hmW/image.png" alt="" />
         </div>
       </div>
     )

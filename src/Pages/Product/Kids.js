@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
+import Gallery3 from "../shared/Gallery/Gallery3";
 
 /*
   This example requires Tailwind CSS v2.0+ 
@@ -70,6 +71,7 @@ const products = [
         },[])
     return (
       <div className="bg-white m-10  rounded-b-lg">
+          <Gallery3></Gallery3>
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">All Kids's Shoes</h2>
   
@@ -98,6 +100,7 @@ const products = [
               </div>
             ))}
           </div>
+          <img src="https://i.ibb.co/N2jjTzV/image.png" alt="" />
         </div>
       </div>
     )

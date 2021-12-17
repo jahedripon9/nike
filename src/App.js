@@ -17,6 +17,8 @@ import Register from './Pages/Login/Register/Register';
 import NikeAddShoes from './Pages/NikeAddShoes/NikeAddShoes';
 import Gallery1 from './Pages/shared/Gallery/Gallery1';
 import Gallery2 from './Pages/shared/Gallery/Gallery2';
+import Gallery3 from './Pages/shared/Gallery/Gallery3';
+import Gallery4 from './Pages/shared/Gallery/Gallery3';
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
       <Route path="/addshoes" element={<NikeAddShoes />} />
       <Route path="/gallery" element={<Gallery1 />} />
       <Route path="/gallery" element={<Gallery2 />} />
+      <Route path="/gallery" element={<Gallery3 />} />
+      <Route path="/gallery" element={<Gallery4 />} />
     </Routes>
   </Router>
   </AuthProvider>
