@@ -86,7 +86,9 @@ export default function Example() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 
   return (
-    <div className="bg-white text-left m-10 rounded-buttom-lg">
+    <div className="bg-white text-left m-10 rounded-b-lg
+
+    ">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol role="list" className="max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8">

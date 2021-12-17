@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 
 /*
@@ -61,17 +62,23 @@ const products = [
   ]
   
   export default function Example() {
+    const [products, setProducts]= useState([])
+        useEffect(()=>{
+            fetch('http://localhost:5000/nikecollectionproducts')
+            .then(rse => rse.json())
+            .then(data => setProducts(data));
+        },[])
     return (
-      <div className="bg-white m-10  rounded-buttom-lg">
+      <div className="bg-white m-10  rounded-b-lg">
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">All Collections</h2>
   
           <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
             {products.map((product) => (
               <div key={product.id} className="group relative">
                 <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                   <img
-                    src={product.imageSrc}
+                    src={product.img}
                     alt={product.imageAlt}
                     className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                   />

@@ -3,12 +3,14 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
+import useAuth from '../../../hooks/useAuth'
+
 
 const navigation = [
-  { name: 'Women', href: '#', current: true },
-  { name: 'Men', href:'/product', current: true },
-  { name: 'Kids', href: '#', current: true },
-  { name: 'Collections', href: '#', current: true },
+  { name: 'Women', href: '/woman', current: true },
+  { name: 'Men', href:'/man', current: true },
+  { name: 'Kids', href: '/kids', current: true },
+  { name: 'Collections', href: 'collections', current: true },
 ]
 
 function classNames(...classes) {
@@ -16,8 +18,9 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const {user, logout} =useAuth();
   return (
-    <Disclosure as="nav" className="bg-zinc-300 rounded-top mt-10 mx-10 -mb-10">
+    <Disclosure as="nav" className="bg-zinc-300 rounded-t-lg mt-10 mx-10 -mb-10">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -50,9 +53,9 @@ export default function Example() {
                 <div className="hidden sm:block sm:ml-6 ">
                   <div className="flex ml-20 space-x-4 ">
                     {navigation.map((item) => (
-                     <Link to='/product'> <a
+                      <a
                         key={item.name}
-                        // href={item.href}
+                        href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium ' 
@@ -60,7 +63,7 @@ export default function Example() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a></Link>
+                      </a>
                     ))}
                     
                   </div>
@@ -80,6 +83,9 @@ export default function Example() {
                   <div>
                     <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
+                      <p className="font-bold text-black">
+                        <a href="/login">{user?.email}</a>
+                        </p>
                       <img
                         className="h-8 w-8 rounded-full"
                         src="https://i.ibb.co/zhRQH8q/Jahad-Master.jpg"
@@ -98,35 +104,21 @@ export default function Example() {
                   >
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
+                        
+                          
+                           { user?.email ?   
+                            <span>
+                             <Link to='/deshboard'><button >Deshboard</button>
+                             </Link>
+                            <button onClick={logout} className="block px-3 py-2 hover:bg-gray-200">Logout</button>
+                            </span> 
+                            :
+                            <Link to='/login'><li><button className="block px-3 py-2 hover:bg-gray-200">Login</button></li></Link> }
+                            
+                    
+                      
                       </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
+                      
                     </Menu.Items>
                   </Transition>
                 </Menu> 
