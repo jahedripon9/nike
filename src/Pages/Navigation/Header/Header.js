@@ -20,7 +20,7 @@ function classNames(...classes) {
 export default function Example() {
   const {user, logout} =useAuth();
   return (
-    <Disclosure as="nav" className="bg-zinc-300 rounded-t-lg mt-10 mx-10 -mb-10">
+    <Disclosure as="nav" className="bg-zinc-300 rounded-t-lg mt-10  -mb-10">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -81,16 +81,14 @@ export default function Example() {
                  {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    <Menu.Button className=" flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 ">
                       <span className="sr-only">Open user menu</span>
                       <p className="font-bold text-black">
                         <a href="/login">{user?.email}</a>
                         </p>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://i.ibb.co/zhRQH8q/Jahad-Master.jpg"
-                        alt=""
-                      />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                     </Menu.Button>
                   </div>
                   <Transition

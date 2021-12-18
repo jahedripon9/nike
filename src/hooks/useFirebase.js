@@ -79,7 +79,7 @@ useEffect(() =>{
 },[auth])
 
 useEffect(() => {
-fetch(`https://limitless-crag-70753.herokuapp.com/users/${user.email}`)
+fetch(`https://secret-tundra-51737.herokuapp.com/users/${user.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
 }, [user.email])
@@ -97,7 +97,7 @@ setIsLoading(true)
 
 const saveUser = (email, displayName, method) => {
 const user = { email, displayName };
-fetch('https://limitless-crag-70753.herokuapp.com/users', {
+fetch('https://secret-tundra-51737.herokuapp.com/users', {
     method: method,
     headers: {
         'content-type': 'application/json'

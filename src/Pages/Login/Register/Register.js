@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import useAuth from '../../../hooks/useAuth';
+import Header from '../../Navigation/Header/Header'
+
 
 
 
@@ -31,11 +33,12 @@ const Register = () => {
     
     return (
         <div>
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto my-5 px-4">
+                <Header></Header>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-10 mx-auto flex flex-wrap items-center">
-                <div className="lg:max-w-lg lg:ml-36 lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <img className="object-cover object-center rounded" alt="hero" src="https://i.ibb.co/CBZNk0g/giphy.gif"/>
+                <div className="lg:max-w-lg lg:ml-36 lg:w-full md:w-1/2 md:w-5/6 lg:mb-10 md:mb-0">
+                    <img className="object-cover object-center rounded" alt="hero" src="https://i.ibb.co/YtWjVKZ/image.png"/>
                     </div>
                     <div className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                     <h2 className="text-gray-900 text-lg font-medium title-font mb-5 uppercase">Register</h2>

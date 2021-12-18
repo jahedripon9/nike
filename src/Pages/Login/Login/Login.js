@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Header from '../../Navigation/Header/Header'
+
 
 
 const Login = () => {
@@ -24,11 +26,13 @@ const Login = () => {
     }
     return (
         <div>
-            <div className="container mx-auto px-4">
+            
+            <div className="container mx-auto my-3 px-4">
+                <Header></Header>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-10 mx-auto flex flex-wrap items-center">
-                <div className="lg:max-w-lg lg:ml-36 lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <img className="object-cover object-center rounded" alt="hero" src="https://i.ibb.co/16p9QYj/drone-800-600.gif"/>
+                <div className="lg:max-w-lg lg:mx-auto lg:w-full md:w-1/2 md:w-5/6 lg:mb-10 md:mb-0 ">
+                    <img className="object-cover object-center rounded " alt="hero" src="https://i.ibb.co/4ffvsjk/image.png"/>
                     </div>
                     <div className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                     <h2 className="text-gray-900 text-lg font-medium title-font mb-5">LOG IN</h2>
@@ -46,7 +50,7 @@ const Login = () => {
                         <button className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Login</button>
                     </form>
                     
-                    <Link to='/register'><button className="text-lg text-gray-500 mt-3">Create Your DJI Account</button></Link>
+                    <Link to='/register'><button className="text-lg text-gray-500 mt-3">Create Your Nike Account</button></Link>
                     </div>
                 </div>
             </section>
